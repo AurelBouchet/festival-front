@@ -6,7 +6,6 @@ import './Movie.css';
 const Movie = () => {
   const [movies, setMovies] = useState([]);
   // const [searchValue, setSearchValue] = React.useState('');
-
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/movies`)
