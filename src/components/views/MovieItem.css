@@ -1,0 +1,42 @@
+.box-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  width: 60%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background-color: #f6f6f6;
+  box-shadow: 3px 3px 3px lightgrey;
+}
+
+title {
+  text-decoration: none;
+  margin-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.director {
+  padding: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1px;
+  text-align: justify;
+}
+
+.genre {
+  margin-bottom: 0;
+}
+.theater {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.schedule {
+  margin-bottom: 5px;
+}

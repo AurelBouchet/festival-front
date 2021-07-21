@@ -1,0 +1,25 @@
+.navBar {
+  background-color: chartreuse;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+}
+.homeLink, .movieLink, .theaterLink {
+  text-decoration: none;
+  color:white;
+  font-size:15px;
+}
+
+.homeLink, .movieLink, .theaterLink :visited{
+color:white;
+}
+
+@media screen and (min-width: 768px) {
+
+
+.homeLink, .movieLink, .theaterLink {
+  text-decoration: none;
+  color:white;
+  font-size:32px;
+}
+}

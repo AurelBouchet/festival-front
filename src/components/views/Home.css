@@ -1,0 +1,43 @@
+.homeTitle {
+  margin-top:20vw;
+  background-color: white;
+  font-size: 25px;
+  text-align: center;
+  width: 70%;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  opacity: 0.83;
+}
+
+.homeDescription {
+  opacity: 0.83;
+  margin-top: 25vw;
+  font-size: 20px;
+  width: 60%;
+  padding: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: justify;
+  overflow-wrap: normal;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .homeTitle {
+    margin-top:10vw;
+    font-size: 55px;
+    width: 60%;
+  }
+
+  .homeDescription {
+    margin-top:10vw;
+    font-size: 30px;
+    width: 40%;
+  }
+}
