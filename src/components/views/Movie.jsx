@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import MovieItem from './MovieItem';
 import './Movie.css';
+import Footer from '../commons/Footer';
 
 const Movie = () => {
   const [movies, setMovies] = useState([]);
-  // const [searchValue, setSearchValue] = React.useState('');
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/movies`)
@@ -21,12 +21,14 @@ const Movie = () => {
         <MovieItem
           title={movie.title}
           director={movie.director}
-          genre={movie.genre}
-          theater={movie.theater}
+          genre={movie.name}
+          theater={movie.place}
           schedule={movie.schedule}
+          picture={movie.picture}
           key={movie.id}
         />
       ))}
+      <Footer />
     </div>
   );
 };

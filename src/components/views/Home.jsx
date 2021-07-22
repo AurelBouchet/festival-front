@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import Footer from '../commons/Footer';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         séances seront au prix de 6 euros! Venez rêver et vous émerveiller dans
         les salles obscures!
       </p>
+      <Footer />
     </div>
   );
 };
