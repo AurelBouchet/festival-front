@@ -5,7 +5,11 @@ import './Movie.css';
 import Footer from '../commons/Footer';
 
 const Movie = () => {
+  const [theater, setTheater] = useState('');
+
+  // const [value, setValue] = useState('');
   const [movies, setMovies] = useState([]);
+
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/movies`)
@@ -16,20 +20,38 @@ const Movie = () => {
   }, []);
 
   return (
-    <div className="results">
-      {movies.map((movie) => (
-        <MovieItem
-          title={movie.title}
-          director={movie.director}
-          genre={movie.name}
-          theater={movie.place}
-          schedule={movie.schedule}
-          picture={movie.picture}
-          key={movie.id}
+    <>
+      <div className="results">
+        <p className="searchTheater">Rechercher un film par cinéma :</p>
+        <input
+          className="selectPlace"
+          type="text"
+          placeholder="Rex, Concorde ou Minuit"
+          value={theater}
+          onChange={(e) => setTheater(e.target.value)}
         />
-      ))}
-      <Footer />
-    </div>
+      </div>
+      <h2 className="moviesTitle">Les films:</h2>
+      <div className="movieResults">
+        {movies
+          .filter((movie) =>
+            movie.place.toLowerCase().includes(theater.toLowerCase())
+          )
+
+          .map((movie) => (
+            <MovieItem
+              title={movie.title}
+              director={movie.director}
+              genre={movie.name}
+              theater={movie.place}
+              schedule={movie.schedule}
+              picture={movie.picture}
+              key={movie.id}
+            />
+          ))}
+        <Footer />
+      </div>
+    </>
   );
 };
 export default Movie;

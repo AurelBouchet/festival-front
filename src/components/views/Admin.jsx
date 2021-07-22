@@ -19,7 +19,7 @@ const Admin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('name', movie.name);
+    formData.append('title', movie.title);
     formData.append('director', movie.director);
     formData.append('genre_id', movie.genre_id);
     formData.append('schedule', movie.schedule);
@@ -92,7 +92,7 @@ const Admin = () => {
           classInput
           label="Titre du film"
           type="text"
-          name="name"
+          name="title"
           value={movie}
           setValue={setMovie}
         />

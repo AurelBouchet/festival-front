@@ -7,21 +7,27 @@
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 20px;
-  width: 60%;
+  border-radius: 10px;
+  width: 80%;
   margin-top: 10px;
   margin-bottom: 30px;
   background-color: #f6f6f6;
   box-shadow: 3px 3px 3px lightgrey;
 }
 
-title {
-  text-decoration: none;
-  margin-bottom: 2px;
-  margin-left: auto;
-  margin-right: auto;
+.movieTitle {
+  padding:0px;
+  font-size: 5vw;
 }
+
+.movieData {
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+}
+
 .director {
+  grid-column: 3;
   padding: 2vw;
   margin-left: auto;
   margin-right: auto;
@@ -30,18 +36,37 @@ title {
 }
 
 .genre {
+  grid-column: 3;
   margin-bottom: 0;
 }
 .theater {
+  grid-column: 3;
   margin-top: 0;
   margin-bottom: 20px;
 }
 
 .schedule {
+  grid-column: 3;
   margin-bottom: 5px;
 }
 
-.picMovie{
-  height:50%;
-  width:50%;
+.pictureMovie {
+  grid-column: 1/3;
+  grid-row: 2/4;
+  max-width: 20vw;
+  height: auto;
+  border:solid;
+}
+@media screen and (min-width: 768px) {
+  .box-item {
+    border-radius: 10px;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #f6f6f6;
+    box-shadow: 3px 3px 3px lightgrey;
+  }
+  .pictureMovie {
+    max-width: 9vw; 
+  }
 }
