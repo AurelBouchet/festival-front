@@ -24,15 +24,15 @@ const Movie = () => {
       <div className="results">
         <p className="searchTheater">Rechercher un film par cinéma :</p>
         <input
-          className="selectPlace"
           type="text"
-          placeholder="Rex, Concorde ou Minuit"
+          placeholder="Rex,Concorde ou Minuit"
+          className="selectPlace"
           value={theater}
           onChange={(e) => setTheater(e.target.value)}
         />
       </div>
-      <h2 className="moviesTitle">Les films:</h2>
-      <div className="movieResults">
+      <h2 className="moviesTitle">Les films</h2>
+      <div className="moviesSelection">
         {movies
           .filter((movie) =>
             movie.place.toLowerCase().includes(theater.toLowerCase())

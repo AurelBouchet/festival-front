@@ -12,3 +12,10 @@
   color:white;
   margin-left: 2vw;
 }
+@media screen and (min-width: 768px) {
+  .moviesTitle{
+    font-size:5vw;
+    margin-top:1px;
+    margin-bottom:1px;
+}
+}
