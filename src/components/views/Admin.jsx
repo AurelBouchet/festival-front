@@ -90,6 +90,7 @@ const Admin = () => {
         <input
           className="inputMovie"
           label="Titre du film"
+          placeholder="Film"
           type="text"
           name="title"
           onChange={(e) => setMovie({ ...movie, title: e.target.value })}
@@ -98,6 +99,7 @@ const Admin = () => {
         <input
           className="inputMovie"
           label="Réalisateur"
+          placeholder="Réalisateur"
           type="text"
           name="director"
           onChange={(e) => setMovie({ ...movie, director: e.target.value })}
