@@ -6,8 +6,6 @@ import Footer from '../commons/Footer';
 
 const Movie = () => {
   const [theater, setTheater] = useState('');
-
-  // const [value, setValue] = useState('');
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -46,7 +44,6 @@ const Movie = () => {
               theater={movie.place}
               schedule={movie.schedule}
               picture={movie.picture}
-              key={movie.id}
             />
           ))}
         <Footer />
