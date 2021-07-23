@@ -44,6 +44,7 @@ const Movie = () => {
               theater={movie.place}
               schedule={movie.schedule}
               picture={movie.picture}
+              key={movie.id}
             />
           ))}
         <Footer />
