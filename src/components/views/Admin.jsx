@@ -37,7 +37,7 @@ const Admin = () => {
         JSON.stringify(
           response,
           Swal.fire({
-            position: 'center',
+            position: 'top-end',
             icon: 'success',
             title: 'Votre film a bien été ajouté!',
             showConfirmButton: false,
@@ -48,9 +48,9 @@ const Admin = () => {
       .catch(
         (error) => JSON.stringify(error),
         Swal.fire({
-          position: 'center',
-          icon: 'error',
-          title: 'Veuillez vérifier les informations saisies',
+          position: 'top-end',
+          icon: 'question',
+          title: 'Veuillez vérifier les informations',
           showConfirmButton: false,
           timer: 3000,
         })
