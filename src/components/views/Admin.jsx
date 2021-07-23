@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import axios from 'axios';
-import FormInput from '../commons/FormInput';
 import './Admin.css';
 
 const Admin = () => {
@@ -50,7 +49,7 @@ const Admin = () => {
         Swal.fire({
           position: 'top-end',
           icon: 'question',
-          title: 'Veuillez vérifier les informations',
+          title: 'Vérifier les informations',
           showConfirmButton: false,
           timer: 3000,
         })
@@ -82,28 +81,26 @@ const Admin = () => {
       >
         <p className="addPic">ajouter une affiche :</p>
         <input
-          className="inputPic'"
+          className="inputMovie'"
           type="file"
           label="affiche"
           name="picture"
           onChange={(e) => setPic(e.target.files[0])}
         />
-        <FormInput
-          classInput
+        <input
+          className="inputMovie"
           label="Titre du film"
           type="text"
           name="title"
-          value={movie}
-          setValue={setMovie}
+          onChange={(e) => setMovie({ ...movie, title: e.target.value })}
         />
 
-        <FormInput
-          classInput
+        <input
+          className="inputMovie"
           label="Réalisateur"
           type="text"
           name="director"
-          value={movie}
-          setValue={setMovie}
+          onChange={(e) => setMovie({ ...movie, director: e.target.value })}
         />
 
         <label htmlFor="genre">
@@ -129,13 +126,12 @@ const Admin = () => {
             })}
           </select>
         </label>
-        <FormInput
-          classInput
+        <input
+          className="inputMovie"
           label="Horaire"
           type="datetime-local"
           name="schedule"
-          value={movie}
-          setValue={setMovie}
+          onChange={(e) => setMovie({ ...movie, schedule: e.target.value })}
         />
         <label htmlFor="theater">
           <span className="select"> </span>
